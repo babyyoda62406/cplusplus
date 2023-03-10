@@ -1,8 +1,6 @@
 /**
-Programa que determina si un número es primo o no utilizando un ciclo for
-
-Entrada: 7
-Salida: El número 7 es primo
+Salida: La suma de los nÃºmeros impares es 100
+Espero que estos ejercicios te ayuden a practicar programaciÃ³n lineal alternativa y cÃ­clica
 */
 
 #include <bits/stdc++.h>
@@ -11,18 +9,14 @@ using namespace std;
 
 int main()
 {
-    int entrada =0,valor =0;
-    cin>>entrada;
-
-        if( entrada!= 2 && entrada!=3 && entrada != 5){
-            if (entrada % 2 != 0 && entrada % 3 != 0 && entrada % 5 !=0){
-                cout<<" este es un numero primo"<<endl;
-            }else{
-                cout<<"este   nooooooooooooooo es un numero primo"<<endl;
-
-                }
+    int x = 0;
+    for (int i =1; i<100; i+=2){
+        x+=i;
+        if (x>=100){
+            break;
         }
+    }
+    cout<<x;
 
-
-
+    return 0 ;
 }
