@@ -1,31 +1,31 @@
 /**
-Programa que busca el elemento mÃ¡s grande en una matriz usando ciclos anidados
-
-Entrada: [[3, 4, 5], [6, 7, 8], [1, 2, 9]]
-Salida: El elemento mÃ¡s grande es 9
+Programa que verifica si una palabra es un palíndromo utilizando un ciclo while
+Entrada: "radar"
+Salida: La palabra es un palíndromo
 */
 
 #include <bits/stdc++.h>
+#include <string>
 using namespace std;
 
 
 int main()
 {
-    int matriz [3] [3];
-    int x =0;
+    string palabra = "";
+    cin>>palabra;
+    int x = 0;
+    int finish = palabra.size()-1;
+    while(x<=finish){
+        if(palabra[x]!= palabra[finish]){
+            cout<<"la palabra no es un palindromo"<<endl;
+            return 0;
+        }
+        x++;
+        finish--;
+    }
+    cout<<"la palabra es palindroma"<<endl;
 
-    for (int i =0; i<3; i++){
-        for(int j =0; j<3; j++){
-            cin>>matriz[i][j];
-        }
-    }
-    for (int i =0; i<3; i++){
-        for(int j =0; j<3; j++){
-        if (x<matriz[i][j]){
-            x= matriz[i][j];
-        }
-        }
-    }
-    cout<<"el mayor numero de la matriz es:"<<x<<endl;
+
+
     return 0 ;
 }
